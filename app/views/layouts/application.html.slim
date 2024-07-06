@@ -1,0 +1,22 @@
+doctype html
+html lang="#{I18n.locale}"
+
+  head
+    title = "CSPTalk"
+    meta name="viewport" content="width=device-width,initial-scale=1"
+    = csrf_meta_tags
+    = csp_meta_tag
+
+    = stylesheet_link_tag "application", "data-turbo-track": "reload"
+    = javascript_include_tag "application", "data-turbo-track": "reload", type: "module"
+
+    = render 'layouts/shared/vendor_tags'
+
+  body
+    = render 'shared/navbar'
+
+    div class="flex flex-col gap-8 items-center justify-center w-screen mt-12"
+      = yield
+
+    p.notice = notice
+    p.alert = alert

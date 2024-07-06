@@ -1,0 +1,7 @@
+en:
+  pages:
+    home:
+      title: Hi everyone!
+      last_messages: Last messages
+    messages:
+      by_user_email: Par %{email}

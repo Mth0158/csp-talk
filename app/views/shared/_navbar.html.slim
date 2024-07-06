@@ -1,0 +1,8 @@
+nav class="flex justify-end px-12 py-6 shadow-md"
+  - if current_user
+    = link_to t('.links.sign_out'),
+              destroy_user_session_path,
+              data: { turbo_method: :delete }
+  - else
+    = link_to t('.links.sign_in'),
+              new_user_session_path

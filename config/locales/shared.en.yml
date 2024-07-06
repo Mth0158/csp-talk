@@ -1,0 +1,6 @@
+en:
+  shared:
+    navbar:
+      links:
+        sign_in: Sign in
+        sign_out: Log out
